@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <h2>Welcome to Todo App</h2>
+    <Todos/>
   </div>
 </template>
 
 <script>
-
+  import Todos from './components/Todos.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Todos
+  }
 }
 </script>
 

@@ -6,10 +6,12 @@
             <input type="checkbox" :checked=todo.completed>{{todo.title}}
           </div>
         </ul>
+        <NewTodo/>
     </div>
 </template>
 
 <script>
+import NewTodo from './NewTodo.vue'
 export default {
   data() {
     return {
@@ -20,6 +22,9 @@ export default {
         {id: 4, title: 'Exercise', completed: false},
         ]
     }
+  },
+  components: {
+    NewTodo
   }
 }
 </script>

@@ -1,12 +1,25 @@
 <template>
 <div>
-  <h2>New Todo</h2>
+  <input type="text" v-model="todo">
+  <button @click="createTodo">create todo</button>
 </div>
 </template>
 
 <script>
-export default {
-}
+  export default {
+    data() {
+      return {
+        todo: ''
+      }
+    },
+
+    methods: {
+      createTodo() {
+        this.$emit('clicked', this.todo);
+        this.todo = '';
+      }
+    }
+  }
 </script>
 
 <style>

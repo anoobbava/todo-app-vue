@@ -3,8 +3,10 @@
       <ul>
         <div class="todo-list" v-for="todo in todos" :key=todo.title>
             <div class="todo-item">
-              <input type="checkbox" :checked=todo.completed>
-            <p>{{todo.title}}</p>
+              <input type="checkbox" v-model="todo.completed">
+              <p v-bind:style="[todo.completed ? completedStyle : '']">
+                {{todo.title}}
+              </p>
             </div>
         </div>
       </ul>
@@ -22,12 +24,19 @@ export default {
         { title: 'Make up Bed', completed: false},
         { title: 'Prayer', completed: false},
         { title: 'Exercise', completed: false},
-        ]
+      ],
+
+      completedStyle: {
+        fontStyle: 'italic',
+        textDecoration: 'line-through'
+      }
     }
   },
+
   components: {
     NewTodo
   },
+
   methods: {
     fetchValueFromNewTodo(value) {
       this.todos.push({'title': value})
@@ -69,5 +78,5 @@ export default {
     font-weight: 100;
     font-size: 15px;
     color: #333333;
-}
+  }
 </style>

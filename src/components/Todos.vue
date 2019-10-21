@@ -1,14 +1,13 @@
 <template>
     <div>
-        <h2>Todos</h2>
-        <ul>
-          <div class="todo-list" v-for="todo in todos" :key=todo.title>
-              <div class="todo-item">
-                <input type="checkbox" :checked=todo.completed>
-              <p>{{todo.title}}</p>
-              </div>
-          </div>
-        </ul>
+      <ul>
+        <div class="todo-list" v-for="todo in todos" :key=todo.title>
+            <div class="todo-item">
+              <input type="checkbox" :checked=todo.completed>
+            <p>{{todo.title}}</p>
+            </div>
+        </div>
+      </ul>
         <NewTodo @clicked="fetchValueFromNewTodo"/>
     </div>
 </template>
@@ -68,7 +67,7 @@ export default {
     border-bottom: 1px solid #cecece;
     font-family: Roboto, sans-serif;
     font-weight: 100;
-    font-size: 18px;
+    font-size: 15px;
     color: #333333;
 }
 </style>

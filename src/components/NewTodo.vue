@@ -16,8 +16,11 @@
 
     methods: {
       createTodo() {
-        this.$emit('clicked', this.todo);
-        this.todo = '';
+        if(this.todo !== '') {
+          this.$emit('clicked', this.todo);
+          this.todo = '';
+        }
+        
       }
     }
   }

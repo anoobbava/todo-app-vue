@@ -1,5 +1,7 @@
 # todo-app
 
+Basic todo App to learn and understand the basic app functionality Workflow.
+
 ## Project setup
 ```
 yarn install

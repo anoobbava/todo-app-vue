@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Todos from './components/Todos.vue'
+import Todos from './components/Todos.vue'
 export default {
   name: 'app',
   components: {
@@ -15,4 +15,7 @@ export default {
 </script>
 
 <style>
+body {
+    background-color: whitesmoke;
+}
 </style>
